@@ -1,0 +1,24 @@
+###api
+@api = http://localhost:3001
+
+### Lista profesores
+GET {{api}}/profesores
+
+###cuenta profesores
+GET {{api}}/profesoresCount
+
+###IngresaProfesor
+
+###Lista alumnos
+GET {{api}}/alumnos
+
+###cuenta alumnos
+GET {{api}}/profesoresCount
+
+###insert cursos
+POST {{api}}/ingresaCursos
+
+Content-Type: application/json
+{
+    nombre: "prueba",
+}

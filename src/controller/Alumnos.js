@@ -4,7 +4,7 @@ import {connect} from '../database';
 export const getAlumnos = async (req, res) => {
     //Probar extracción por consola
     const connection = await connect()
-    const [row] = await connection.query("SELECT * FROM alumnos");
+    const [row] = await connection.query("SELECT * FROM alumnos order by id DESC");
     //console.log(row);
     res.json(row);
 }

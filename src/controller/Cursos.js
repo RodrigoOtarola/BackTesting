@@ -5,7 +5,7 @@ import {connect} from '../database';
 export const getCursos = async (req, res) => {
     //Probar extracción por consola
     const connection = await connect()
-    const [row] = await connection.query("SELECT * FROM cursos");
+    const [row] = await connection.query("SELECT * FROM cursos order by id DESC");
     //console.log(row);
     res.json(row);
 }

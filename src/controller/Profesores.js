@@ -14,7 +14,7 @@ export const getProfesores = async (req, res) => {
 //Cuenta profesores
 export const getProfesoresCount = async (req, res) => {
     const connection = await connect()
-    const [row] = await connection.query("SELECT count(*) FROM profesores");
+    const [row] = await connection.query("SELECT count(*) as total FROM profesores");
     console.log(row);
     res.json(row);
 }

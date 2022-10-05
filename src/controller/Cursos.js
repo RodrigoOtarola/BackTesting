@@ -13,7 +13,7 @@ export const getCursos = async (req, res) => {
 //Cuenta profesores
 export const getCursosCount = async (req, res) => {
     const connection = await connect()
-    const [row] = await connection.query("SELECT count(*) FROM cursos");
+    const [row] = await connection.query("SELECT count(*) as total FROM cursos");
     //console.log(row);
     res.json(row);
 }
